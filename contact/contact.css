@@ -1,0 +1,181 @@
+:root {
+    --background-color: #F8F8F5;
+    --backgrond-color-2: #0D1B2A;
+    --extra-color: #000080;
+}
+
+
+
+        /* Estilos gerais */
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url('/home/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-size: auto;
+            color: var(--background-color-2); /* Cor principal para textos */
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.6); /* Fundo do header */
+            color: var(--backgrond-color); /* Texto claro para contraste */
+            padding: 1em; /* Header maior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 130px; /* Tamanho máximo da logo */
+            height: auto; /* M2000antém a proporção */
+            display: block; /* Garante que seja um bloco */
+           /* margin: 0 auto 1em auto;  Centraliza e adiciona margem abaixo */
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif; /* Fonte para títulos principais */
+            font-size: 30px; /* Tamanho especificado */
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--extra-color); /* Mantém consistência */
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .box {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .box h1 {
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .grid-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .boxes {
+            border: 3px solid var(--backgrond-color-2);
+            padding: 25px 30px 30px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .boxes h2 {
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .boxes h2::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 1px;
+            background: #555;
+            margin: 10px auto 0;
+        }
+
+        .boxes ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .boxes li {
+            margin: 12px 0;
+        }
+
+        .boxes a {
+            text-decoration: none;
+            color: #0D1B2A;
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            font-size: 14px;
+        }
+
+        .boxes a:hover {
+            text-decoration: underline;
+        }
+
+
+        footer{
+            background-color: var(--extra-color); /* Fundo do footer */
+            color: #F8F8F5;
+            padding: 25px 40px 20px;
+            font-size: 10px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .separa-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .na-esquerda-footer {
+            display: flex;
+            gap: 25px;
+        }
+
+        .na-direita-footer {
+            text-align: right;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 10px;
+        }
