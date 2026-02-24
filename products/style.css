@@ -1,0 +1,219 @@
+:root {
+    --background-color: #F8F8F5;
+    --backgrond-color-2: #0d1b2a;
+    --extra-color: #000080;
+}
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url('/products/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-size: auto;
+            color: var(--background-color-2); /* Cor principal para textos */
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.6); /* Fundo do header */
+            color: var(--backgrond-color); /* Texto claro para contraste */
+            padding: 1em; /* Header maior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 130px; /* Tamanho máximo da logo */
+            height: auto; /* M2000antém a proporção */
+            display: block; /* Garante que seja um bloco */
+           /* margin: 0 auto 1em auto;  Centraliza e adiciona margem abaixo */
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif; /* Fonte para títulos principais */
+            font-size: 30px; /* Tamanho especificado */
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--extra-color); /* Mantém consistência */
+        }
+
+        main {
+            flex: 1;
+        }
+
+         .produtos {
+            text-align: center;
+            padding: 4em 2em;
+        }
+
+        .produtos h2 {
+            font-family: 'IBM Plex Mono', monospace; /* Fonte para subtítulos */
+            font-size: 41px; /* Tamanho especificado */
+            color: var(--background-color-2); /* Cor do texto */
+            margin-bottom: 1em;
+        }
+
+        .produtos a{
+            color: var(--backgrond-color); /* Links no header */
+            font-size: 15px;
+        }
+
+        .produtos a:hover{
+            color: var(--extra-color);
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            width: 250px;
+            background-color: var(--background-color);
+            color: var(--backgrond-color-2);
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 105%;
+            transform: translateY(-50%);
+            transition: opacity 0.3s;
+            z-index: 10;
+        }
+
+        .tooltip:hover .tooltip-text{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -6%;
+            transform: translateY(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent var(--backgrond-color-2) transparent transparent;
+        }
+
+        .back {
+            margin: 0 auto;
+            max-width: 1300px;
+            padding: 10px 20px;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .grid-marc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .marc {
+            background: rgba(248, 248, 245, 0.5);
+            padding: 30px;
+            border-radius: 7px;
+            width: 90%;
+            max-width: 850px;
+            margin: 15px auto;
+            border: 2px solid rgba(13, 27, 42, 0.6);
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .marc a {
+            color: var(--backgrond-color-2);
+            text-decoration: none;
+        }
+
+        .marc img {
+            max-width: 100%;
+            height: auto;
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        footer{
+            background-color: var(--extra-color); /* Fundo do footer */
+            color: #F8F8F5;
+            padding: 25px 40px 20px;
+            font-size: 10px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .separa-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .na-esquerda-footer {
+            display: flex;
+            gap: 25px;
+        }
+
+        .na-direita-footer {
+            text-align: right;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        @media (max-width: 1366px) {
+
+            .back {
+            max-width: 1200px;
+            padding: 40px 40px;  
+            }
+        }
