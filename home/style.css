@@ -15,7 +15,7 @@
         body {
             display: flex;
             flex-direction: column;
-            background-image: url('/home/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-image: url('/nuwa/home/photos/fundo-ondas.png'); /* Fundo claro e neutro */
             background-size: cover;
             color: var(--background-color-2); /* Cor principal para textos */
             font-family: 'Lexend', sans-serif; /* Fonte padrão */
@@ -146,7 +146,7 @@
         }
 
         .limitada {
-            background-image: url('photos/fundo-ondas.png');
+            background-image: url('/nuwa/home/photos/fundo-ondas.png');
             background-size: cover;
             color: #0D1B2A;
         }
@@ -283,4 +283,5 @@
             .product-item1 {
                 grid-template-columns: repeat(2, 1fr);
             }
+
         }
