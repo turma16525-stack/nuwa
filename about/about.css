@@ -1,0 +1,326 @@
+:root {
+    --background-color: #F8F8F5;
+    --backgrond-color-2: #0D1B2A;
+    --extra-color: #000080;
+}
+
+
+
+        /* Estilos gerais */
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url('/about/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-size: auto;
+            color: var(--background-color-2); /* Cor principal para textos */
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /*main {
+            flex: 1;
+        }*/
+
+        header {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.6); /* Fundo do header */
+            color: var(--backgrond-color); /* Texto claro para contraste */
+            padding: 1em; /* Header maior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 130px; /* Tamanho máximo da logo */
+            height: auto; /* M2000antém a proporção */
+            display: block; /* Garante que seja um bloco */
+           /* margin: 0 auto 1em auto;  Centraliza e adiciona margem abaixo */
+        }
+
+        header h1 {
+            font-family: 'Lexend', sans-serif; /* Fonte para títulos principais */
+            font-size: 30px; /* Tamanho especificado */
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--extra-color); /* Mantém consistência */
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .imagem-principal {
+            width: 100vw;
+            height: 35vh;
+            display: block;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        .about-us {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        .about-us p {
+            color: var(--background-color);
+            font-size: 64px;
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .aboutus {
+            display: flex;
+            align-items: stretch;
+            box-sizing: border-box;
+            overflow: hidden;
+            justify-content: space-between;
+            margin: 0;
+        }
+
+        .imagem-wrapper {
+            flex: 0 0 41%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imagem {
+            object-fit: cover;
+            transform: translateX(120%);
+            opacity: 0;
+            animation: rightSide 1.2s ease-out forwards;
+        }
+
+        .slide {
+            /*z-index: 1;*/
+            flex: 0 0 59%;
+            background: var(--backgrond-color-2);
+            clip-path: polygon(0 0, 95% 0, 70% 100%, 0 100%);
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            transform: translateX(-100%);
+            animation: slideLeftB 1.2s ease-out forwards;
+        }
+
+        .slide-text {
+            display: flex;
+            flex-direction: column;
+            max-width: 850px;
+            /*transform: translateY(-50px);*/
+        }
+
+        .slide h2{
+            opacity: 0;
+            margin-top: 30px;
+            transform: translateX(-100%);
+            animation: slideLeftB 1.2s ease-out forwards;
+            font-family: 'Lexend', sans-serif; /* Fonte para títulos principais */
+            font-size: 70px; 
+            color: var(--background-color);        
+        }
+
+        .text-about {
+            font-family: 'Lexend', sans-serif; /* Fonte para títulos principais */
+            font-size: 16px; 
+            color: var(--background-color); 
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        footer{
+            background-color: var(--extra-color); /* Fundo do footer */
+            color: #F8F8F5;
+            padding: 25px 40px 20px;
+            font-size: 10px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .separa-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .na-esquerda-footer {
+            display: flex;
+            gap: 25px;
+        }
+
+        .na-direita-footer {
+            text-align: right;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 10px;
+        }
+
+        @keyframes slideLeftB {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rightSide {
+           /* from {
+                opacity: 0;
+                transform: translateX(100vw);
+            }*/
+            to {
+                opacity: 1;
+                transform: translateX(6%);
+            }
+        }
+
+
+        @media (max-width: 1360px) {
+            .about-us p {
+                font-size: 50px;
+            }
+
+            .slide-text {
+                max-width: 580px;
+                margin-top: -60px;
+            }
+
+            .slide {              
+                width: 60%;
+                height: 66%;
+            }
+
+            .slide p {
+                font-size: 15px;
+                margin-top: 0;
+            }
+
+            .slide h2 {
+                font-size: 60px;
+                margin-top: 50px;
+            }
+
+            .imagem {
+                width: 57%;
+                top: 0;
+                height: 66%;
+            }
+
+            @keyframes slideLeft {
+                to {
+                    opacity: 1;
+                    transform: translateX(10%);
+                }
+            }
+
+            @keyframes rightSide {
+                to {
+                    opacity: 1;
+                    transform: translateX(8.3%);
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .about-us p {
+                font-size: 50px;
+            }
+
+            .slide-text {
+                max-width: 500px;
+                margin-top: -60px;
+            }
+
+            .slide {              
+                width: 70%;
+                height: 66%;
+            }
+
+            .slide p {
+                font-size: 15px;
+                margin-top: 0;
+            }
+
+            .slide h2 {
+                font-size: 40px;
+                margin-top: 50px;
+            }
+
+            .imagem {
+                width: 70%;
+                top: 0;
+                height: 66%;
+            }
+
+            @keyframes slideLeft {
+                to {
+                    opacity: 1;
+                    transform: translateX(10%);
+                }
+            }
+
+            @keyframes rightSide {
+                to {
+                    opacity: 1;
+                    transform: translateX(30%);
+                }
+            }
+        }
