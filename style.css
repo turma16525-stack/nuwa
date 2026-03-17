@@ -15,7 +15,7 @@
         body {
             display: flex;
             flex-direction: column;
-            background-image: url('/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-image: url('/nuwa/photos/fundo-ondas.png'); /* Fundo claro e neutro */
             background-size: auto;
             color: var(--background-color-2); /* Cor principal para textos */
             font-family: 'Lexend', sans-serif; /* Fonte padrão */
@@ -146,7 +146,7 @@
         }
 
         .limitada {
-            background-image: url('/photos/fundo-ondas.png');
+            background-image: url('/nuwa/photos/fundo-ondas.png');
             background-size: auto;
             color: #0D1B2A;
         }
