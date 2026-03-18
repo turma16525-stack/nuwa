@@ -257,7 +257,7 @@
             }
         }
         
-        @media (max-width: 1366px) {
+        @media (max-width: 1400px) {
             .about-us p {
                 font-size: 50px;
             }
@@ -275,6 +275,10 @@
                 transform: translate(140px, -10px);
             }
 
+            .imagem-principal {
+                height: 30vh;
+            }
+            
             .image1{
                 width: 200px;
                 height: 320px;
