@@ -42,8 +42,8 @@
     }
 
     document.querySelectorAll('header a').forEach(link => {
-  const linkPath = new URL(link.href, window.location.origin).pathname;
-  const currentPath = window.location.pathname;
+  const linkPath = new URL(link.href, window.location.origin).pathname.split('/').pop();
+  const currentPath = window.location.pathname.split('/').pop();
 
   if (linkPath === currentPath) {
     link.addEventListener("click", function (e) {
