@@ -130,6 +130,7 @@
             border-radius: 5px;
             font-size: 18px;
             display: inline-block; /* Para tornar clicável */
+            margin-top: 30px;
         }
 
         .btn:hover {
