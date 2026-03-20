@@ -3,9 +3,6 @@
     --backgrond-color-2: #0D1B2A;
     --extra-color: #000080;
 }
-
-
-
         /* Estilos gerais */
 
         html, body {
@@ -15,7 +12,7 @@
         body {
             display: flex;
             flex-direction: column;
-            background-image: url('/photos/fundo-ondas.png'); /* Fundo claro e neutro */
+            background-image: url('/nuwa/photos/fundo-ondas.png'); /* Fundo claro e neutro */
             background-size: auto;
             color: var(--background-color-2); /* Cor principal para textos */
             font-family: 'Lexend', sans-serif; /* Fonte padrão */
