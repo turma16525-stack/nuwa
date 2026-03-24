@@ -239,8 +239,9 @@
             }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
             .grid-marc {
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
