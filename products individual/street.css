@@ -146,6 +146,11 @@
         }
 
         @media (max-width: 1366px) {
+            .product-grid {
+                grid-template-columns: repeat(4, minmax(180px, 230px));
+                gap: 50px;
+            }
+
             .product-item {
                 width: 200px;
             }
@@ -153,4 +158,22 @@
             .product-item h4 {
                 font-size: 20px;
             }
-        }        
+        }
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(3, minmax(180px, 230px));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(1, minmax(180px, 230px));
+            }
+        }
+
+        @media (max-width: 400px) {
+            .product-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }       
