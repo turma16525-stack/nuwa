@@ -168,7 +168,7 @@
         
         @media (max-width: 768px) {
             .product-grid {
-                grid-template-columns: repeat(2, minmax(180px, 230px));
+                grid-template-columns: repeat(1, minmax(180px, 230px));
             }
         }
 
