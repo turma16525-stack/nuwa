@@ -1,0 +1,107 @@
+:root {
+    --background-color: #F8F8F5;
+    --backgrond-color-2: #0D1B2A;
+    --extra-color: #000080;
+}
+
+        /* Estilos gerais */
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            color: var(--background-color-2); /* Cor principal para textos */
+            font-family: 'Lexend', sans-serif; /* Fonte padrão */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.6); /* Fundo do header */
+            color: var(--backgrond-color); /* Texto claro para contraste */
+            padding: 1em; /* Header maior */
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fonte para títulos principais */
+            font-size: 30px; /* Tamanho especificado */
+            margin: 0;
+        }
+
+        header h1 a {
+            color: #000080; /* Mantém a cor do título mesmo sendo um link */
+            text-decoration: none; /* Remove sublinhado */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: -1.5em 0 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: var(--extra-color); /* Mantém consistência */
+        }
+
+        main {
+            flex: 1;
+        }
+
+        footer{
+            background-color: var(--extra-color); /* Fundo do footer */
+            color: #F8F8F5;
+            padding: 25px 40px 20px;
+            font-size: 10px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .separa-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .na-esquerda-footer {
+            display: flex;
+            gap: 25px;
+        }
+
+        .na-direita-footer {
+            text-align: right;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--backgrond-color); /* Links no header */
+            text-decoration: none;
+            font-size: 10px;
+        }
