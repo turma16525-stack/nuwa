@@ -63,6 +63,70 @@
             flex: 1;
         }
 
+        .box {
+            position: fixed;
+            left: 99.2%;
+            top: 20%;
+            z-index: 1;
+        }
+
+        .box img {
+            height: auto;
+            flex: 0;
+        }
+
+        .imagem-anuncio {
+            width: 220px;
+            height: 390px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            align-self: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .imagem-anuncio:hover {
+            transform: translateX(-100%);
+        }
+
+        .signs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 45px;
+        }
+
+        .signs p {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .photo {
+            min-width: 350px;
+            background: white;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+        }
+
+        .image {
+            position: relative;
+            height: 715px;
+            width: 585px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
         footer{
             background-color: var(--extra-color); /* Fundo do footer */
             color: #F8F8F5;
@@ -89,11 +153,28 @@
 
         .na-esquerda-footer {
             display: flex;
+            flex-direction: column;
             gap: 25px;
+        }
+
+        .links-footer {
+            display: flex;
+            gap: 25px;
+            transform: translateY(10px);
+        }
+
+        .logos{
+            display: flex;
+        }
+
+        .logos img {
+            width: 40px;
+            height: 40px;
         }
 
         .na-direita-footer {
             text-align: right;
+            transform: translateY(-45px);
         }
 
         footer p {
@@ -104,4 +185,26 @@
             color: var(--backgrond-color); /* Links no header */
             text-decoration: none;
             font-size: 10px;
+        }
+
+        @media (max-width: 1366px) {
+            .image {
+                height: 533px;
+                width: 415px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .signs {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 790px) {
+            .text {
+                line-height: 2;
+                max-width: 20px;
+            }
         }
