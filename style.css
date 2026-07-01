@@ -187,7 +187,7 @@
             font-size: 10px;
         }
 
-        @media (max-width: 1366px) {
+        @media (max-width: 1750px) {
             .image {
                 height: 533px;
                 width: 415px;
