@@ -228,7 +228,7 @@
             }
         }
         
-        @media (max-width: 1400px) {
+        @media (max-width: 1540px) {
 
             .text-about {
                 font-size: 16px;
@@ -280,7 +280,7 @@
             }
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1312px) {
             .text-about {
                 width: 100%;
                 transform: translate(30px, -50px);
@@ -408,6 +408,22 @@
                 text-align: center;
             }
 
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            header h1 {
+                font-size: 25px;
+                margin-bottom: 0.25rem;
+            }
+
+            nav ul {
+                margin: 0;
+            }
+
         }
 
         @media (max-width: 673px) {
@@ -424,5 +440,21 @@
 
             .imagem-principal {
                 height: 25vh;
+            }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            header h1 {
+                font-size: 25px;
+                margin-bottom: 0.25rem;
+            }
+
+            nav ul {
+                margin: 0;
             }
         }
