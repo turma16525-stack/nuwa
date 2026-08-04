@@ -63,16 +63,80 @@
             flex: 1;
         }
 
-        .box {
-            position: fixed;
-            left: 99.2%;
-            top: 20%;
-            z-index: 1;
+        .banner-container {
+            width: 100%;
+            max-width: 1550px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 16px;
         }
 
-        .box img {
-            height: auto;
-            flex: 0;
+        .banner-container img {
+            width: 900px;
+            height: 660px;
+        }
+
+        .banner-content {
+            width: 44%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .banner-content h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 4rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin: 0;
+            color: #0d1b2a;
+        }
+
+        .banner-line {
+            width: 590px;
+            height: 3px;
+            background-color: #000;
+        }
+
+        .banner-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 18px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .banner-actions p {
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1rem;
+            color: #0d1b2a;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding-right: 130px;
+        }
+
+        .button {
+            background-color: #1b2fc2;
+            border: none;
+            border-radius: 10px;
+            padding: 16px 30px;
+            cursor: pointer;
+        }
+
+        .button a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
         }
 
         .imagem-anuncio {
@@ -187,7 +251,58 @@
             font-size: 10px;
         }
 
-        @media (max-width: 1750px) {
+        @media (max-width: 1540px) {
+            .banner-container {
+                max-width: 1350px;
+                gap: 50px;
+            }
+
+            .banner-content h1 {
+                font-size: 3.3rem;
+            }
+
+            .banner-actions p {
+                padding-right: 20px;
+            }
+
+            .banner-container img {
+                width: 800px;
+                height: 600px;
+            }
+
+            .banner-line {
+                width: 485px;
+            }
+
+            .image {
+                height: 533px;
+                width: 470px;
+            }
+        }
+
+        @media (max-width: 1366px) {
+            .banner-container {
+                max-width: 1250px;
+                gap: 50px;
+            }
+
+            .banner-content h1 {
+                font-size: 3.3rem;
+            }
+
+            .banner-actions p {
+                padding-right: 20px;
+            }
+
+            .banner-container img {
+                width: 700px;
+                height: 500px;
+            }
+
+            .banner-line {
+                width: 485px;
+            }
+
             .image {
                 height: 533px;
                 width: 415px;
@@ -206,5 +321,66 @@
             .text {
                 line-height: 2;
                 max-width: 20px;
+            }
+
+            .signs {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                overflow-x: hidden;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            header h1 {
+                font-size: 25px;
+                margin-bottom: 0.25rem;
+            }
+
+            nav ul {
+                margin: 0;
+            }
+
+            .banner-container {
+                flex-direction: column;
+                gap: 24px;
+                overflow: hidden;
+            }
+
+            .banner-container img {
+                width: 450px;
+                height: 500px;
+                order: 1;
+            }
+
+            .banner-content {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                order: 2;
+                
+            }
+
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .banner-line {
+                width: 100%;
+                max-width: 360px;
+            }
+
+            .banner-actions {
+                justify-content: center;
+            }
+
+            .banner-actions p {
+                padding-right: 0;
             }
         }
